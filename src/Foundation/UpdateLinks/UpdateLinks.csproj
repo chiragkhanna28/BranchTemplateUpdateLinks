@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Events\UpdateLinks.cs" />
+    <Compile Include="Events\FixBrokenLinks.cs" />
     <Compile Include="Jobs\ItemReferencesReplacementJob.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,12 +9,14 @@ using UpdateLinks.Jobs;
 
 namespace UpdateLinks.Events
 {
-    public class UpdateLinks
+    public class FixBrokenLinks
     {
-        private readonly bool async;
-        private readonly string fieldIds;
-        public UpdateLinks()
+        private readonly bool _async;
+        private readonly string _fieldIds;
+        public FixBrokenLinks(bool async, string fieldIds)
         {
+            this._async = async;
+            this._fieldIds = fieldIds;
         }
         public void OnItemAdded(object sender, EventArgs args)
         {
@@ -33,10 +35,18 @@ namespace UpdateLinks.Events
             Assert.IsTrue(item.Children.Count == 1, "branch item structure is corrupted: {0}".FormatWith(AuditFormatter.FormatItem(item)));
 
             var branch = item.Children[0];
-            ID[] fields = fieldIds.Split(',').Select(x => new ID(x)).ToArray();
+            ID[] fields = this._fieldIds.Split(',').Select(x => new ID(x)).ToArray();
 
             var replacementJob = new ItemReferencesReplacementJob(branch, contentItem, true, fields);
-            replacementJob.Start();
+            if (this._async)
+            {
+                replacementJob.StartAsync();
+            }
+            else
+            {
+                replacementJob.Start();
+            }
+
         }
     }
 }
