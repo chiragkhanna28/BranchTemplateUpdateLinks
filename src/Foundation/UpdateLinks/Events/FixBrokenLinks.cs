@@ -13,9 +13,9 @@ namespace UpdateLinks.Events
     {
         private readonly bool _async;
         private readonly string _fieldIds;
-        public FixBrokenLinks(bool async, string fieldIds)
+        public FixBrokenLinks(string async, string fieldIds)
         {
-            this._async = async;
+            this._async = string.Equals(async, "true", StringComparison.OrdinalIgnoreCase);
             this._fieldIds = fieldIds;
         }
         public void OnItemAdded(object sender, EventArgs args)
