@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{C18A23F1-A42C-4BBD-BD53-37395E83FA98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{0CFE4580-FD5D-4B39-B01F-6DC7B4FB67C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{67D872CF-5C57-4D6C-AED6-F374B9CA6E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateLinks", "src\Foundation\UpdateLinks\UpdateLinks.csproj", "{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FBA8E75-B144-4370-BA53-5B1BB0B00BF8} = {0CFE4580-FD5D-4B39-B01F-6DC7B4FB67C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C3C9ED7-8FCF-4802-8DDF-1127E949308A}
+	EndGlobalSection
+EndGlobal
