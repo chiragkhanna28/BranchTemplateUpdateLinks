@@ -46,7 +46,6 @@ namespace UpdateLinks.Events
             {
                 replacementJob.Start();
             }
-
         }
     }
 }
